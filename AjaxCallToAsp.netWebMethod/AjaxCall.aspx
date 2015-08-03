@@ -1,44 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AjaxCallToAsp.netWebMethod.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AjaxCall.aspx.cs" Inherits="AjaxCallToAsp.netWebMethod.AjaxCall" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table>
+        <tr>
+            <td>Name:
+            </td>
+            <td>
+                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>Number:
+            </td>
+            <td>
+                <asp:TextBox ID="txtNumber" runat="server"></asp:TextBox>form submitted only if number is  5
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <asp:Button ID="btnSubmit" Text="Submit" runat="server" OnClick="btnSubmit_Click" OnClientClick="return CallWebMethod()"></asp:Button>
+                <span id="spanClick">Click</span>
+            </td>
+        </tr>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Ajax call to the web Method on clicking the Button userControl</title>
-    <script src="Scripts/jquery-2.1.4.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <h2>Ajax call to the web Method on clicking the Button userControl</h2>
-
-        <div>
-            <table>
-                <tr>
-                    <td>Name:
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Number:
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtNumber" runat="server"></asp:TextBox>form submitted only if number is  5
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <asp:Button ID="btnSubmit" Text="Submit" runat="server" OnClick="btnSubmit_Click" OnClientClick="return CallWebMethod()"></asp:Button>
-                        <span id="spanClick">Click</span>
-                    </td>
-                </tr>
-
-            </table>
-        </div>
-    </form>
-
+    </table>
 
     <script type="text/javascript">
         $(function () {
@@ -125,5 +113,4 @@
             }
         }
     </script>
-</body>
-</html>
+</asp:Content>
