@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -21,7 +22,7 @@ namespace AjaxCallToAsp.netWebMethod
 
 
         [WebMethod]
-        public static string AjaxCall(string num)
+        public static string AjaxCallbyjquery(string num)
         {
             if (num == "5")    //check ur logic here
             {

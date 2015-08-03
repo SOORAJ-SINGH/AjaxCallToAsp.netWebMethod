@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <script src="Scripts/jquery-2.1.4.js"></script>
     </asp:ContentPlaceHolder>
 </head>
 <body>
